@@ -15,12 +15,8 @@ function markupCreateFunction(obj) {
   `);
 }
 gallery.insertAdjacentHTML("afterbegin", markup.join(""));
-gallery.addEventListener("click", handlerClick);
-function handlerClick(evt) {
-  evt.preventDefault();
-  var lightbox = new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionPosition: "bottom",
-    captionDelay: 250,
-  });
-}
+var lightbox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionPosition: "bottom",
+  captionDelay: 250,
+});
